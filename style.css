@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+h1 {
+    font-family: 'Poppins';
+    font-weight: 800;
+}
+
+h2 {
+    font-family: 'Poppins';
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html {
+    background-color: var(--Off-white);
+}
+
+:root {
+    /* Primary */
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    outline: 1px solid red;
+    margin: 0;
+}
+
+
+
+/* card */
+
+.card { 
+    background-color: var(--White);
+    /* width: 52rem;
+    height: 40rem; */
+    border-radius: 5% 5% 20% 5%;
+
+}
+
+.container {
+    padding: 2rem;
+}
+
+/* form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+/* Label */
+
+label {
+    color: var(--Light-grey);
+    font-size: 18px;
+    font-weight: 400;
+    
+}
+/* inputs */
+
+input {
+    width: 10rem;
+    height: 4.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: .5rem;
+    border: 2px solid var(--Light-grey);
+    font-weight: 800;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+}
+
+/* submit button */
+
+.submit-block {
+    display: flex;
+    align-items: center;
+}
+.submit-block hr {
+    width: 100%;
+}
+
+.submit-button {
+    border-radius: 50%;
+    background-color: var(--Purple);
+    border: none;
+    cursor: pointer;
+}
+
+/* submit icon */
+
+.icon {
+    width: 96px;
+    height: 96px;
+}
+
+/* output */
+
+.output span {
+    color: var(--Purple);
+}
+
+
+
+
+
+
+
+
