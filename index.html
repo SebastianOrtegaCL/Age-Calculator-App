@@ -17,42 +17,40 @@
 </head>
 <body >
   <div class="card">
-    <div class="container">
       <form id="myForm">
         <div class="input-group">
           <div class="input-row">
             <label for="day">Day</label>
-              <input type="number" id="day">
+              <input type="number" id="day" placeholder="DD">
+              <div id="dayError" class="error-message"></div>
           </div>
           <div class="input-row">
             <label for="month">Month</label>
-              <input type="number" id="month">
+              <input type="number" id="month" placeholder="MM">
+              <div id="monthError" class="error-message"></div>
           </div>
           <div class="input-row">
             <label for="year">Year</label>
-              <input type="number" id="year">
+              <input type="number" id="year" placeholder="YYYY">
           </div>
         </div>
         
           <div class="submit-block">
-            <hr>
+            <div class="line"></div>
             <button type="submit" class="submit-button"><img class="icon" src="assets/images/icon-arrow.svg" alt=""></button>
           </div>
       </form>
-      <div class="output">
+      <div class="output italic">
         <h1> <span>--</span> years</h1>
         <h1> <span>--</span> months</h1>
         <h1> <span>--</span> days</h1>
       </div>
+  </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/SebastianOrtegaCL">Sebastian Ortega</a> <a href="https://www.linkedin.com/in/sebastian-ortega-fernandez-a9b954175/">LinkedIn</a>.
     </div>
-  
-    
-  </div>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/SebastianOrtegaCL">Sebastian Ortega</a> <a href="https://www.linkedin.com/in/sebastian-ortega-fernandez-a9b954175/">LinkedIn</a>.
-  </div>
+
   <script src="main.js"></script>
 </body>
 </html>

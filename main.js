@@ -1,9 +1,15 @@
 document.getElementById('myForm').addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const {value: dayValue} = document.getElementById('day');
-    const {value: monthValue} = document.getElementById('month');
-    const {value: yearValue} = document.getElementById('year');
+    // Get input element
+    const dayInput = document.getElementById('day');
+    const monthInput = document.getElementById('month');
+    const yearInput = document.getElementById('year');
+
+    // Get the value
+    const dayValue = dayInput.value;
+    const monthValue = monthInput.value;
+    const yearValue = yearInput.value;
 
     // birthday
     const bday = parseInt(dayValue, 10);
@@ -18,6 +24,29 @@ document.getElementById('myForm').addEventListener('submit', (e) => {
     let monthToday = today.getMonth() + 1;
     const dayToday = today.getDate();
 
+    let hasError = false;
+
+    if ( isNaN(bday) || bday < 1 || bday > 31){
+        dayInput.classList.add('error');
+        dayError.textContent = 'Invalid Day';
+        hasError = true;
+    } else {
+        dayInput.classList.remove('error');
+        dayError.textContent = '';
+    }
+
+    if ( isNaN(bmonth) || bmonth < 1 || bmonth > 12) {
+        monthInput.classList.add('error');
+        monthError.textContent = 'Invalid Month';
+        hasError = true;
+    } else {
+        monthInput.classList.remove('error');
+        monthError.textContent = '';
+    }
+
+    if (hasError ){
+        return;
+    }
 
     if ( dayToday < bday ) {
         document.querySelector('.output h1:nth-of-type(3) span').textContent = (dayToday - bday + 30).toString();
@@ -34,7 +63,6 @@ document.getElementById('myForm').addEventListener('submit', (e) => {
     }
 
     document.querySelector('.output h1:nth-of-type(1) span').textContent = ( yearToday - byear );
-
 
     
 });
