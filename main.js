@@ -44,6 +44,15 @@ document.getElementById('myForm').addEventListener('submit', (e) => {
         monthError.textContent = '';
     }
 
+    if( isNaN(byear) || byear < 1 ) {
+        yearInput.classList.add('error');
+        yearError.textContent = 'Invalid Year';
+        hasError = true;
+    } else {
+        yearInput.classList.remove('error');
+        yearError.textContent = '';
+    }
+
     if (hasError ){
         return;
     }

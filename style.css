@@ -60,7 +60,7 @@ form {
 /* Label */
 
 label {
-    color: var(--Light-grey);
+    color: var(--Off-black);
     font-size: 18px;
     font-weight: 400;
     
@@ -108,6 +108,11 @@ input {
     background-color: var(--Purple);
     border: none;
     cursor: pointer;
+    padding: 25px 30px;
+}
+
+.submit-button:hover {
+    background-color: var(--Off-black);
 }
 
 
